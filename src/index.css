@@ -7,4 +7,5 @@
 body{
   font-family: "Rancho", cursive;
   font-weight: 400;
+  overflow-y: auto;
 }
