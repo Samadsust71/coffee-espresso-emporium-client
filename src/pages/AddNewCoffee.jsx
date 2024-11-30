@@ -31,7 +31,7 @@ const AddNewCoffee = () => {
       <div className="bg-[#F4F3F0] rounded-lg p-8 max-w-2xl w-full">
        
         {/* Form Header */}
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-4">Add New Coffee</h2>
+        <h2 className="text-2xl font-bold text-center text-[#374151] mb-4">Add New Coffee</h2>
         <p className="text-center text-gray-600 mb-8">
           Fill in the details below to add a new coffee to the collection. Fields marked with * are required.
         </p>
