@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoArrowBack } from "react-icons/io5";
 import { Link, useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateCoffee = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const loadedCoffee = useLoaderData();
 
   const handleSubmit = (e) => {

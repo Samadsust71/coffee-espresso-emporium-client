@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { IoArrowBack } from "react-icons/io5";
 import { Link, useLoaderData } from "react-router-dom";
 
 const ViewCoffee = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const coffee = useLoaderData();
   const { name, chef, supplier, taste, category, details, photo } =
     coffee || {};

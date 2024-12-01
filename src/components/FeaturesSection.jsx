@@ -1,5 +1,5 @@
 import React from "react";
-import { GiCoffeeCup, GiRibbonMedal, GiCoffeeBeans, GiRoastChicken } from "react-icons/gi";
+
 
 const FeaturesSection = () => {
   const features = [
