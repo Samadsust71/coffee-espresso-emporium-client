@@ -6,7 +6,10 @@ import Swal from "sweetalert2";
 const UpdateCoffee = () => {
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // Adds a smooth scroll effect
+    });
   }, [])
   const loadedCoffee = useLoaderData();
 
