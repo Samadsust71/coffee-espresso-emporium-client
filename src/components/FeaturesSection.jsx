@@ -27,9 +27,9 @@ const FeaturesSection = () => {
 
   return (
     <div className="bg-[#ECEAE3] py-12">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 ">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {features.map((feature, index) => (
-          <div key={index} className="flex flex-col items-start p-4  rounded-lg">
+          <div key={index} className="flex flex-col items-center md:items-start p-4  rounded-lg">
             <img src={feature.icon} className="mb-4"/>
             <h3 className="text-lg font-semibold text-[#331A15]">{feature.title}</h3>
             <p className="text-sm text-[#331A15] mt-2">{feature.description}</p>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { IoArrowBack } from "react-icons/io5";
+import Swal from "sweetalert2";
 
 const AddNewCoffee = () => {
 
@@ -15,8 +16,29 @@ const AddNewCoffee = () => {
    const category = form.category.value;
    const details = form.details.value;
    const photo = form.photo.value;
-   const coffee = {name, chef, supplier, taste, category , details, photo}
-   console.log(coffee)
+   const newCoffee = {name, chef, supplier, taste, category , details, photo}
+  
+
+  //  send coffee data to server 
+  fetch('https://coffee-espresso-server-pi.vercel.app/coffees',{
+    method: "POST",
+    headers:{
+      "content-type":"application/json"
+    },
+    body:JSON.stringify(newCoffee)
+  })
+  .then(res=>res.json())
+  .then(data=>{
+    if (data.insertedId) {
+      Swal.fire({
+        title: 'Success!',
+        text: 'Coffee added successfully',
+        icon: 'success',
+        confirmButtonText: 'Ok'
+      })
+    }
+    form.reset()
+  })
 
  }
 
